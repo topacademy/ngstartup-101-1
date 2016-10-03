@@ -1,0 +1,33 @@
+<!-- views/pages/about.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body class="container">
+
+    <header>
+        <% include ../partials/header %>
+    </header>
+
+    <main>
+        <div class="row">
+            <div class="col-sm-8">
+                <%data.forEach( function( data ){ %>
+                    <pre>
+                        <p>Name: <%= data.name %></p>
+                        <p>Building: <%= data.address.building %></p>
+                        <p>Coordinates: <%= data.address.coord %></p>
+                        <p>Borough: <%= data.borough %></p>
+                    </pre> <% }); %>  
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+    
+</body>
+</html>
